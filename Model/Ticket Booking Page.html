@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Ticket Booking
+        </title>
+    </head>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url("C:\\Users\\sn302\\OneDrive\\Desktop\\WhatsApp Image 2024-09-12 at 14.23.22_a86a59d6.jpg");
+            background-size: cover;
+        }
+        .form-container {
+            background-color: whitesmoke;
+            padding-left: 200pc;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px;
+            width:20%
+        }
+        input[type="text"]{
+            width: 90%;
+            height: 35px;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        label{
+            color: darkred
+        }
+        input[type = "submit"]{
+            background-color: green;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+        input[type = "reset"]{
+            background-color: red;
+            float:center;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+    </style>
+    <body>
+        <div class = "form-container">
+        <form>
+            <label> Customer Name:</label><br>
+            <input type = "text" name = "Customer name"><br>
+            <label>Gender:</label><br>
+            <select name = "Flight">
+                <option value = "select">select</option>
+                <option value = "Male">Male</option>
+                <option value = "Female">Female</option>
+                <option value = "Others">Others</option>
+            </select><br>
+            <label> Date:</label><br>
+            <input type = "date" name = "date"><br>
+            <label> Time:</label><br>
+            <input type = "time" name = "Time"><br>
+            <label> Ticket Id:</label><br>
+            <input type = "text" name = "Ticket Id"><br>
+            <label>Choosing Flight:</label><br>
+            <input type = "radio" name = "subject" value = "Specijet">Specijet<br/>
+            <input type = "radio" name = "subject" value = "Indigo">Indigo<br/>
+            <input type = "radio" name = "subject" value = "Swizz">Swizz<br/>
+            <input type = "radio" name = "subject" value = "Air India">Air India<br/>
+            <br>
+            <label>Choosing Seat.No:</label><br>
+            <select name = "Flight">
+                <option value = "select">select</option>
+                <option value = "1">1</option>
+                <option value = "2">2</option>
+                <option value = "3">3</option>
+                <option value = "4">4</option>
+                <option value = "5">5</option>
+            </select>
+            <br><br>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset"><br/>
+        </form>
+    </div>
+    </body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Registartion Form</title>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .form-container {
+            background-color: #ebe4e4;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+        input[type="text"], input[type="number"], input[type="email"], input[type="tel"], select, textarea, input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="submit"], input[type="reset"] {
+            width: 48%;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            color: #fff;
+            font-size: 16px;
+        }
+        h2 {
+            color: black;
+        }
+        label {
+            color: black;
+        }
+        input[type="submit"] {
+            background-color: green;
+        }
+
+        input[type="reset"] {
+            background-color: red;
+            float: right;
+        }
+    </style>
+</head>
+<script>
+    function validateForm() {
+  var name = document.getElementById("name").value;
+  var age = document.getElementById("age").value;
+  var address = document.getElementById("address").value;
+  var email = document.getElementById("email").value;
+  var hobbies = document.getElementsByName("hobby");
+  var gender = document.getElementsByName("gender");
+  var country = document.getElementById("country").value;
+  if(name == "") {
+    alert("Please enter your name.");
+    return false;
+  }
+  if(age == "") {
+    alert("Please enter your age.");
+    return false;
+  } else if (isNaN(age) || age <= 0) {
+    alert("Please enter a valid age.");
+    return false;
+  }
+  if (address == "") {
+    alert("Please enter your address.");
+    return false;
+  }
+  var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (email == "") {
+    alert("Please enter your email ID.");
+    return false;
+  } else if (!emailPattern.test(email)) {
+    alert("Please enter a valid email ID.");
+    return false;
+  }
+  var hobbySelected = false;
+  for (var i = 0; i < hobbies.length; i++) {
+    if (hobbies[i].checked) {
+      hobbySelected = true;
+      break;
+    }
+  }
+  if (!hobbySelected) {
+    alert("Please select at least one hobby.");
+    return false;
+  }
+  var genderSelected = false;
+  for (var i = 0; i < gender.length; i++) {
+    if (gender[i].checked) {
+      genderSelected = true;
+      break;
+    }
+  }
+  if (!genderSelected) {
+    alert("Please select your gender.");
+    return false;
+  }
+  if (country == "") {
+    alert("Please select your country.");
+    return false;
+  }
+  alert("Form submitted successfully!");
+  return true;
+}
+</script>
+<body>
+    <div class="form-container">
+        <h2>User Registration Form</h2>
+        <form id="registrationForm" onsubmit="return validateForm()">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name"><br>
+            
+            <label for="age">Age:</label><br>
+            <input type="number" id="age" name="age"><br>
+            
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address"><br>
+            
+            <label for="email">Email ID:</label>
+            <input type="email" id="email" name="email"><br>
+            
+            <label for="hobby">Hobbies:</label><br>
+            <input type="checkbox" name="option1" value="Archery">Archery<br/>
+            <input type="checkbox" name="option2" value="Photography">Photography<br/>
+            <input type="checkbox" name="option3" value="Writing">Writing<br/>
+            <input type="checkbox" name="option4" value="Painting">Painting<br/>
+            <input type="checkbox" name="option5" value="Dance">Dance<br/><br/>
+            
+            <label>Gender:</label><br>
+            <input type="radio" id="male" name="gender" value="Male">Male<br>
+            <input type="radio" id="female" name="gender" value="Female">Female<br>
+            <input type="radio" id="other" name="gender" value="Other">Other<br><br>
+            
+            <label for="country">Country:</label>
+            <select id="country" name="country">
+              <option value="">Select a country</option>
+              <option value="India">India</option>
+              <option value="Canada">Canada</option>
+              <option value="Australia">Australia</option>
+              <option value="Bangladesh">Bangladesh</option>
+              <option value="China">China</option>
+              <option value="Pakistan">Pakistan</option>
+            </select><br><br>
+            
+            <input type="submit" value="Register">
+            <input type="reset" value="Cancel">
+          </form>          
+    </div>
+</body>
+</html>
