@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bike Showroom</title>
+</head>
+<frameset rows="15%,85%" border="0">
+    <frame name="header" src="E:\VS_Code\IP\Assignment\Header.html" scrolling="no" noresize>
+    <frameset cols="20%,80%" border="0">
+        <frame name="brands" src="E:\VS_Code\IP\Assignment\Brands.html" scrolling="auto" noresize>
+        <frame name="content" src="E:\VS_Code\IP\Assignment\welcome.html" scrolling="auto">
+    </frameset>
+</frameset>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background-color: #333;
+            color: white;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            margin: 10px 0;
+        }
+        a:hover {
+            color: #ff9900;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+    <a href="E:\VS_Code\IP\Assignment\brands1.html" target="content">Pulsur</a>
+    <a href="brand2.html" target="content">Glamer</a>
+    <a href="brand3.html" target="content">Honda</a>
+    <a href="brand4.html" target="content">Avenger</a>
+    </h1>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .bike {
+            margin-bottom: 20px;
+        }
+        .bike h3 {
+            margin: 0;
+            color: #333;
+        }
+        .bike p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <h2>Honda Models</h2>
+    
+    <div class="bike">
+        <h3>Shine</h3>
+        <p>Engine: 200cc</p>
+        <p>Price: $5,000</p>
+    </div>
+
+    <div class="bike">
+        <h3>TVS</h3>
+        <p>Engine: 250cc</p>
+        <p>Price: $6,000</p>
+    </div>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background-color: #f4f4f4;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            font-size: 24px;
+        }
+        img{
+            width: 10%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to the JK Showroom</h1>
+</body>
+</html>
