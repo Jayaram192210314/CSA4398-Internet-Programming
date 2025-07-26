@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>JavaScript</title>
+    </head>
+    <script type = "text/javascript">
+    function Mul(){
+        const user = document.form1.username.value;
+        const pass = document.form1.password.value;
+        const c = user*pass;
+        document.write("Multiplication:" +c);
+    }
+    function DIVe(){
+        const user = document.form1.username.value;
+        const pass = document.form1.password.value;
+        const d = user/pass;
+        document.write("Division: " +d)
+    }
+    </script>
+    <body>
+        <form id="form1" name="form1">
+            <label>Username:</label>
+            <input type="text" name="username"/><br><br>
+            <label>Password:</label>
+            <input type="text" name="password"/><br><br>
+            <input type="button" value ="Multiply" onclick="Mul()">
+            <input type="button" value ="Division" float = "right" onclick ="DIVe()">
+        </form>
+    </body>
+</html>

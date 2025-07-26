@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Pseudo classes</title>
+<style>
+input:focus
+{
+background-color:skyblue;
+color:white;
+}
+    a.ColoredTxt:link {color: red}
+    a.ColoredTxt:visited {color: blue}
+    a.ColoredTxt:hover {color: green}
+
+    a.BigTxt:link {color: red}
+    a.BigTxt:visited {color: blue}
+    a.BigTxt:hover {font-size: 200%}
+</style>
+</head>
+<body>
+<form>
+Enter some string:<input type="text" name="my_txt"/>
+<br/>
+    <h3>Move Mouse over following text</h3>
+    <em>
+    <p>
+    <a class="ColoredTxt" href="E:\VS_Code\IP\form.html">The text
+    changes color
+    </a>
+    </p>
+    </em>
+    <p>
+    <em>
+    <a class="BigTxt" href="E:\VS_Code\IP\form.html">The text is getting
+    Big in size
+    </a>
+    </em>
+    </p>
+<input type="submit" value="Enter"/>
+</form>
+</body>
+</html>

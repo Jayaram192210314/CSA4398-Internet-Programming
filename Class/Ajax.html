@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AJAX Example</title>
+</head>
+<body>
+  <h1>AJAX Example</h1>
+  <button id="load-data">Load Data</button>
+  <div id="data-container"></div>
+  <script>
+    // Get the button and container elements
+const loadDataButton = document.getElementById('load-data');
+const dataContainer = document.getElementById('data-container');
+
+// Add an event listener to the button
+loadDataButton.addEventListener('click', loadData);
+
+// Function to load data from the server
+function loadData() {
+  // Create an XMLHttpRequest object
+  const xhr = new XMLHttpRequest();
+
+  // Set the request method and URL
+  xhr.open('GET', 'E:\\VS_Code\\IP\\Student.xml', true);
+
+  // Set the callback function for when the data is received
+  xhr.onload = function() {
+    if (xhr.status === 200) {
+      // Parse the XML data
+      const xmlDoc = xhr.responseXML;
+      const root = xmlDoc.documentElement;
+      const persons = root.getElementsByTagName('person');
+
+      // Create a table to display the data
+      const table = document.createElement('table');
+      const tbody = document.createElement('tbody');
+      table.appendChild(tbody);
+
+      // Iterate over the persons and add rows to the table
+      for (let i = 0; i < persons.length; i++) {
+        const person = persons[i];
+        const row = document.createElement('tr');
+        const nameCell = document.createElement('td');
+        const ageCell = document.createElement('td');
+        nameCell.textContent = person.getElementsByTagName('name')[0].textContent;
+        ageCell.textContent = person.getElementsByTagName('age')[0].textContent;
+        row.appendChild(nameCell);
+        row.appendChild(ageCell);
+        tbody.appendChild(row);
+      }
+
+      // Update the container with the table
+      dataContainer.innerHTML = '';
+      dataContainer.appendChild(table);
+    } else {
+      console.error('Error loading data:', xhr.statusText);
+    }
+  };
+
+  // Set the callback function for when an error occurs
+  xhr.onerror = function() {
+    console.error('Error loading data:', xhr.statusText);
+  };
+
+  // Send the request
+  xhr.send();
+}
+  </script>
+</body>
+</html>

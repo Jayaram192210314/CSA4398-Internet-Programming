@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <title>CSS Selectors</title>
+    </head>
+    <style>
+        /*Simple Selector*/
+        h1{
+            font-size: 20;
+            font-family: 'Times New Roman', Times, serif;
+            color: blue;
+        }
+        /*Class Selector*/
+        h2.RedText{
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                color: red;
+                font-size: 12;
+        }
+        /*Genric Selector*/
+        .BlueText{
+            font-size: 12;
+            font-family: Arial, Helvetica, sans-serif;
+            color: blueviolet;
+        }
+        /*ID Selector*/
+        #top{
+            font-family: fantasy;
+            font-size: 12;
+            color: cadetblue;
+        }
+        /*Universal
+        *{
+            color: greenyellow;
+        }*/
+        /*Attribute Selector*/
+        p[target]{
+            background-color: black;
+        }
+    </style>
+    <body>
+        <!simple>
+        <h1><center>Happy Birthday Mega Star</center></h1>
+        <!class>
+        <div align = "right">
+        <h2 class = "RedText">Wishes from PowerStar Fans</h2>
+        </div>
+        <!genric>
+        <h3 class = "BlueText">Done by JK</h3>
+        <h4 class = "BlueText"> Back to Here</h4>
+        <!id>
+        <div id = "top">
+        It's time for the first look of New Movie of BOSS.
+        </div>
+        <!Universal>
+        <h5>
+            <ul type = "disc">
+                <li>A friend in need is friend indeed</li>
+                <li>All is fair in love and war</li>
+                <li>God helps them who help themselves</li>
+            </ul>
+        </h5>
+        <p>Attribute Selector is used</p>
+    </body>
+</html>
